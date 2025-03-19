@@ -1,4 +1,4 @@
-package org.example.appdevelopment.ex1
+package org.example.appdevelopment.ex1.vehicle
 
 import kotlinx.coroutines.*
 import kotlin.random.Random

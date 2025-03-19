@@ -1,4 +1,4 @@
-package org.example.appdevelopment.ex1
+package org.example.appdevelopment.ex1.vehicle
 
 class Workshop(
     private val name: String,
