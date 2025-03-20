@@ -1,0 +1,35 @@
+### Key Gradle Concepts
+
+- **Build Type:**
+  - **Debug:** Includes debugging info and logging; auto-signed with a debug key.
+  - **Release:** Optimized, obfuscated, and must be manually signed.
+
+- **Build Variants:**
+  - The combination of a build type and a product flavor (e.g., freeDebug, paidRelease).
+
+- **Product Flavor:**
+  - Defines variants (e.g., free vs. paid) that can customize resources and features.
+
+- **Dependencies:**
+  - External libraries or modules (local or remote) required by the project.
+
+### Android Build Process to Generate an APK
+
+1. **Project Sync:** Gradle reads configuration files and resolves dependencies.
+2. **Resource Processing:** Merges resources from different sources.
+3. **Compilation:** Converts source code (Java/Kotlin) into bytecode.
+4. **Dexing:** Transforms bytecode into DEX files for the Android runtime.
+5. **Packaging:** Combines DEX files, resources, and the manifest into an APK.
+6. **Signing:** Debug builds use a debug key; release builds require a production keystore.
+7. **Optimization:** Tools like zipalign and Proguard/R8 optimize the final APK.
+
+### Essential Gradle Files
+
+- **gradle.properties:**
+  - Stores global configuration settings (e.g., memory settings, build flags).
+
+- **settings.gradle[.kts]:**
+  - Specifies which modules are included in the project; `.kts` indicates Kotlin DSL.
+
+- **build.gradle[.kts]:**
+  - Defines build configurations for the project/module (plugins, Android settings, dependencies, and custom tasks); Kotlin DSL files (`.kts`) provide better type safety and IDE support.
